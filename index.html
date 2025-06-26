@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Design By Aiman</h1>
+   
+    <button><a href="index.html" >Daman</a></button>
+    <input type="text" id="searchbar" placeholder="search">
+</header>
+
+        <section>
+
+<div class="card-container">
+
+   <div class="card">
+<img src="d1.jpg" >
+<p>Daman1</p>
+</div>
+<div class="card">
+<img src="d2.jpg" >
+<p>Daman2</p>
+</div>
+<div class="card">
+<img src="d3.jpg" >
+<p>Daman3</p>
+</div>
+<div class="card">
+<img src="d4.jpg" >
+<p>Daman4</p>
+</div>
+<div class="card">
+<img src="d5.jpg" >
+<p>Daman5</p>
+</div>
+</div>
+</section>
+<script src="jquery.js"></script>
+<script>
+$("#searchbar").keyup(function(){
+var searchtext = $(this).val().toLowerCase();//am
+$(".card").filter(function(){
+var cardtext = $(this).text().toLowerCase();
+if 
+(cardtext.indexOf(searchtext)>-1){
+$(this).show()
+}
+else
+$(this).hide()
+})
+})
+</script>
+</body>
+</html>
